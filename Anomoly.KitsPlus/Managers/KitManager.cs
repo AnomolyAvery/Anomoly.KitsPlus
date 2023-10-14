@@ -60,7 +60,7 @@ namespace Anomoly.KitsPlus.Managers
 
         public KitManager()
         {
-            switch (KitsPlusPlugin.Instance.Configuration.Instance.DatabaseType)
+            switch (KitsPlusPlugin.Instance.Configuration.Instance.DatabaseType.ToLower())
             {
                 case "json":
                     _repo = new JsonRepository();
